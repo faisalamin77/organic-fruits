@@ -1,6 +1,6 @@
 # OrganicFruits
 
-## Covering Functionality
+## Covered Functionality and Architecture
     - Internationalization
     - Unit tests (ApppComponent, FeaturedPlaylistComponent, DataApiService)
     - Modularized the app as:
@@ -11,6 +11,7 @@
             -- DashboardModule
             -- PlaylistsModule
     - The base url is defined in the `environment` files
+    - support filtering and sorting in the grid
 
 ## Because of the restricted time, could not manage to do the following things which I would prefer if spend more time
     - I would have introduced the `Core` module and move the core funtionaly there such as `DataApiService` etc
