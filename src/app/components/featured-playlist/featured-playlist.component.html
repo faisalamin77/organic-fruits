@@ -1,0 +1,9 @@
+<div class="container">
+    <h1 class="my-3 text-warning col-4 py-3">
+        {{pageTitle}}
+    </h1>
+
+    <app-grid [columnDefs]="columnDefs"
+        [data]="playlistContents">
+    </app-grid>
+</div>
