@@ -14,16 +14,14 @@ export class AppComponent implements OnInit, OnDestroy {
   private i18nSubscription: Subscription;
 
   constructor(private translate: TranslateService) {
-    translate.addLangs(['en']);
-    translate.setDefaultLang('en');
+    translate.addLangs(['en', 'fr']);
+    translate.setDefaultLang(translate.getBrowserLang());
   }
 
   ngOnInit(): void {
     this.i18nSubscription =
       this.translate.get('app.title')
-        .subscribe((res: any) => {
-          this.title = res;
-        });
+        .subscribe((res: any) => this.title = res);
   }
 
   ngOnDestroy(): void {
