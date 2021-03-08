@@ -8,5 +8,6 @@
 		"url": "URL",
 		"curator_name": "Curator Name",
 		"artwork": "Artwork"
-	}
+	},
+	"view_featured_playlists": "View Featured Playlists"
 }

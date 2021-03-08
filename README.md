@@ -7,11 +7,14 @@
         -- AppModule
         -- AppRoutingModule
         -- SharedModule (this module contains the common grid component)
+        -- features
+            -- DashboardModule
+            -- PlaylistsModule
     - The base url is defined in the `environment` files
 
 ## Because of the restricted time, could not manage to do the following things which I would prefer if spend more time
-    - I would modularized the app as:
-        -- Core, Shared, Features
+    - I would have introduced the `Core` module and move the core funtionaly there such as `DataApiService` etc
+
     - Would like to have `HttpInterceptor` to add the header contents there
 
 ## Additional added depencies

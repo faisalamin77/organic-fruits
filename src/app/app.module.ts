@@ -5,6 +5,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import DashboardModule from './features/dashboard/dashboard.module';
 import PlaylistsModule from './features/playlists/playlists.module';
 import SharedModule from './shared/share.module';
 
@@ -19,6 +20,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+    DashboardModule,
     PlaylistsModule,
     TranslateModule.forRoot({
       loader: {
