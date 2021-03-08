@@ -1,6 +1,14 @@
 <div class="image">
-  <div class="navbar navbar-dark bg-success box-shadow">
-    <h3 class="text-white">{{ title }}</h3>
+  <div class="navbar navbar-dark bg-success box-shadow justify-content-start">
+    <img [routerLink]="['/']"
+      class="text-white"
+      src="../assets/images/icons8-home.png"
+      alt="{{'HOME' | translate}}"
+      />
+
+    <h3 class="text-white ml-2">
+      {{ title }}
+    </h3>
   </div>
 
   <router-outlet></router-outlet>

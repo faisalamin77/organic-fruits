@@ -20,7 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.i18nSubscription =
-      this.translate.get('app.title')
+      this.translate.get('APP_TITLE')
         .subscribe((res: any) => this.title = res);
   }
 

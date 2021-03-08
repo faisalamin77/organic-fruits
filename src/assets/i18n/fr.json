@@ -1,5 +1,4 @@
 {
-	"app": {
-		"title": "fruit bio"
-	}
+	"APP_TITLE": "Fruit Bio",
+	"HOME": "Domicile"
 }
