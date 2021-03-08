@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import DashboardModule from './features/dashboard/dashboard.module';
 import PlaylistsModule from './features/playlists/playlists.module';
-import SharedModule from './shared/share.module';
 
 // tslint:disable-next-line:typedef
 export function HttpLoaderFactory(http: HttpClient) {
@@ -19,7 +18,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SharedModule,
     DashboardModule,
     PlaylistsModule,
     TranslateModule.forRoot({

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import SharedModule from 'src/app/shared/share.module';
 import { FeaturedPlaylistComponent } from './components/featured-playlist/featured-playlist.component';
+import { PlaylistsRoutingModule } from './playlists-routing.module';
 
 @NgModule({
     imports: [
-        BrowserModule,
-        SharedModule
+        SharedModule,
+        PlaylistsRoutingModule
     ],
     declarations: [FeaturedPlaylistComponent],
     exports: [FeaturedPlaylistComponent]
