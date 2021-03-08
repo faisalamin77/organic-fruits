@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { DataApiService } from 'src/app/services/data-api.service';
+import { DataApiService } from '../../services/data-api.service';
 import * as sampleData from '../../services/sample-data';
 import { FeaturedPlaylistComponent } from './featured-playlist.component';
 

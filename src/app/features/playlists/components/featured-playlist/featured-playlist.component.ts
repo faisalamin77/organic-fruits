@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PlaylistContent } from 'src/app/models/playlist-data';
-import { DataApiService } from 'src/app/services/data-api.service';
 import { PartialColumnDef } from 'src/app/shared/components/grid/column-def';
+import { PlaylistContent } from '../../models/playlist-data';
+import { DataApiService } from '../../services/data-api.service';
 
 @Component({
   selector: 'app-featured-playlist',

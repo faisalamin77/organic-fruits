@@ -5,7 +5,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FeaturedPlaylistComponent } from './components/featured-playlist/featured-playlist.component';
+import PlaylistsModule from './features/playlists/playlists.module';
 import SharedModule from './shared/share.module';
 
 // tslint:disable-next-line:typedef
@@ -19,6 +19,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
+    PlaylistsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -28,8 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   declarations: [
-    AppComponent,
-    FeaturedPlaylistComponent
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
