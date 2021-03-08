@@ -1,6 +1,6 @@
 # OrganicFruits
 
-## Covering Functionality
+## Covered functionality and architecture
     - Internationalization
     - Unit tests (ApppComponent, FeaturedPlaylistComponent, DataApiService)
     - Modularized the app as:
@@ -11,13 +11,14 @@
             -- DashboardModule
             -- PlaylistsModule
     - The base url is defined in the `environment` files
+    - support filtering and sorting in the grid
 
-## Because of the restricted time, could not manage to do the following things which I would prefer if spend more time
+## Because of the restricted time, could not manage to do the following things which I would prefer if have more time
     - I would have introduced the `Core` module and move the core funtionaly there such as `DataApiService` etc
 
-    - Would like to have `HttpInterceptor` to add the header contents there
+    - `HttpInterceptor` - intercept incoming or outgoing HTTP requests using the HttpClient and add the error handler code there. 
 
-## Additional added depencies
+## Additional added dependencies
     - Bootstrap
     - ag-grid-angular
     - ag-grid-community
