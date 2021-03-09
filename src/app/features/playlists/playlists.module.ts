@@ -8,7 +8,6 @@ import { PlaylistsRoutingModule } from './playlists-routing.module';
         SharedModule,
         PlaylistsRoutingModule
     ],
-    declarations: [FeaturedPlaylistComponent],
-    exports: [FeaturedPlaylistComponent]
+    declarations: [FeaturedPlaylistComponent]
 })
 export default class PlaylistsModule {}
