@@ -4,6 +4,6 @@
     </h1>
 
     <app-grid [columnDefs]="columnDefs"
-        [data]="playlistContents">
+        [data]="playlistContents | async">
     </app-grid>
 </div>

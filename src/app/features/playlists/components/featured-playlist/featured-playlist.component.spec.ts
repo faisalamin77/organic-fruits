@@ -43,7 +43,6 @@ describe('FeaturedPlaylistComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(FeaturedPlaylistComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   afterEach(() => {
@@ -56,7 +55,9 @@ describe('FeaturedPlaylistComponent', () => {
   });
 
   it ('should load the `playlistContents`', () => {
-    expect(component.pageTitle).toEqual('Featured Playlists');
-    expect(component.playlistContents).toEqual(sampleData.data.featuredPlaylists.content);
+    component.playlistContents.subscribe(d => {
+      expect(component.pageTitle).toEqual('Featured Playlists');
+      expect(d).toEqual(sampleData.data.featuredPlaylists.content);
+    });
   });
 });
