@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { PartialColumnDef } from 'src/app/shared/components/grid/column-def';
 import { PlaylistContent } from '../../models/playlist-data';
 import { DataApiService } from '../../services/data-api.service';
@@ -8,7 +10,7 @@ import { DataApiService } from '../../services/data-api.service';
   templateUrl: './featured-playlist.component.html',
   styleUrls: ['./featured-playlist.component.scss']
 })
-export class FeaturedPlaylistComponent implements OnInit {
+export class FeaturedPlaylistComponent implements OnInit, OnDestroy {
 
   pageTitle: string;
   playlistContents: PlaylistContent[];
@@ -20,6 +22,8 @@ export class FeaturedPlaylistComponent implements OnInit {
     { field: 'artwork' }
   ];
 
+  private readonly onDestroy = new Subject<void>();
+
   constructor(private dataApiService: DataApiService) {}
 
   ngOnInit(): void {
@@ -28,9 +32,14 @@ export class FeaturedPlaylistComponent implements OnInit {
 
   private retrieveFeaturedPlaylists(): void {
     this.dataApiService.getFeaturedPlaylist()
+      .pipe(takeUntil(this.onDestroy))
       .subscribe((data) => {
         this.pageTitle = data.featuredPlaylists.name;
         this.playlistContents = data.featuredPlaylists.content;
       });
+  }
+
+  ngOnDestroy(): void {
+    this.onDestroy.next();
   }
 }
