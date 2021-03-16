@@ -3,16 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'playlists',
-    loadChildren: () => import('./features/playlists/playlists.module')
-      .then(m => m.default)
-  },
-  {
     path: '',
     loadChildren: () => import('./features/dashboard/dashboard.module')
       .then(m => m.default)
   },
-  { path: '', redirectTo: '', pathMatch: 'full' },
+  {
+    path: 'playlists',
+    loadChildren: () => import('./features/playlists/playlists.module')
+      .then(m => m.default)
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
