@@ -3,10 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve -o --port 8080 --configuration=en",
+    "start:fr": "ng serve -o --port 4200 --configuration=fr",
+    "start:en": "ng serve -o --port 4300 --configuration=en",
+    "build": "ng build --prod --localize",
+    "build:fr": "ng build --configuration=production,fr",
+    "build:en": "ng build --configuration=production,en",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "extract": "ng extract-i18n --output-path=src/locale"
   },
   "private": true,
   "dependencies": {
@@ -15,11 +20,10 @@
     "@angular/compiler": "~11.1.1",
     "@angular/core": "~11.1.1",
     "@angular/forms": "~11.1.1",
+    "@angular/localize": "11.2.5",
     "@angular/platform-browser": "~11.1.1",
     "@angular/platform-browser-dynamic": "~11.1.1",
     "@angular/router": "~11.1.1",
-    "@ngx-translate/core": "13.0.0",
-    "@ngx-translate/http-loader": "6.0.0",
     "ag-grid-angular": "25.1.0",
     "ag-grid-community": "25.1.0",
     "bootstrap": "4.6.0",

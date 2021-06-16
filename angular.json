@@ -13,10 +13,18 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "en": "src/locale/messages.en.xlf",
+          "fr": "src/locale/messages.fr.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": ["fr", "en"],
             "outputPath": "dist/organic-fruits",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -62,6 +70,16 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "fr": {
+              "localize": [
+                "fr"
+              ]
+            },
+            "en": {
+              "localize": [
+                "en"
+              ]
             }
           }
         },
@@ -73,6 +91,12 @@
           "configurations": {
             "production": {
               "browserTarget": "organic-fruits:build:production"
+            },
+            "fr": {
+              "browserTarget": "organic-fruits:build:fr"
+            },
+            "en": {
+              "browserTarget": "organic-fruits:build:en"
             }
           }
         },
